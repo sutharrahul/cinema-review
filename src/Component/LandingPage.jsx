@@ -11,6 +11,7 @@ function LandingPage({ children }) {
           muted
           loop
         />
+        <h1 className="absolute z-10">Welcome To Cinema Review</h1>
         <div className="overlay absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       <div className="content w-full relative z-10">{children}</div>
