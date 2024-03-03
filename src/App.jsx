@@ -1,8 +1,11 @@
 import { useEffect } from "react";
-import Searchbar from "./Component/Searchbar";
+import Searchbar from "./components/Searchbar";
 import { movieSearchData } from "./service";
-import SearchMovieCard from "./Component/SearchMovieCard";
-import LandingPage from "./Component/LandingPage";
+import SearchMovieCard from "./components/SearchMovieCard";
+import LandingPage from "./components/LandingPage";
+import Card from "./components/Card";
+import Footer from "./Footer";
+import MovieReview from "./components/MovieReview";
 
 function App() {
   // useEffect(() => {
@@ -10,10 +13,13 @@ function App() {
   // }, []);
   return (
     <>
-      {/* <SearchMovieCard /> */}
-      <LandingPage>
+      {/* <LandingPage>
         <Searchbar />
-      </LandingPage>
+      </LandingPage> */}
+      {/* <Card />
+      <SearchMovieCard /> */}
+      <MovieReview />
+      <Footer />
     </>
   );
 }
