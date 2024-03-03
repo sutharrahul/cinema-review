@@ -1,4 +1,4 @@
-export const DETAILS_KEY = ["Director", "Writer", "Actors", "Language"];
+export const MOVIE_DETAILS_KEY = ["Director", "Writer", "Actors", "Language"];
 export const movieData = {
   Title: "Iron Man",
   Year: "2008",

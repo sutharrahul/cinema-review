@@ -12,7 +12,7 @@ function App() {
   //   movieSearchData("iron");
   // }, []);
   return (
-    <>
+    <div className="flex flex-col h-screen justify-between">
       {/* <LandingPage>
         <Searchbar />
       </LandingPage> */}
@@ -20,7 +20,7 @@ function App() {
       <SearchMovieCard /> */}
       <MovieReview />
       <Footer />
-    </>
+    </div>
   );
 }
 
