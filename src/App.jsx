@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import LandingPage from "./components/LandingPage";
-import MovieReview from "./components/MovieReview";
+import MovieReviewPage from "./components/MovieReviewPage";
 import SearchMovieCard from "./components/SearchMovieCard";
 import Searchbar from "./components/Searchbar";
 
@@ -10,11 +10,11 @@ function App() {
   // }, []);
   return (
     <div className="flex flex-col h-screen justify-between">
-      <LandingPage>
+      {/* <LandingPage>
         <Searchbar />
       </LandingPage>
-      <SearchMovieCard />
-      {/* <MovieReview /> */}
+      <SearchMovieCard /> */}
+      <MovieReviewPage />
       <Footer />
     </div>
   );
