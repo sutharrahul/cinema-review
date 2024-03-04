@@ -1,20 +1,21 @@
 import Footer from "./Footer";
 import LandingPage from "./components/LandingPage";
 import MovieReviewPage from "./components/MovieReviewPage";
-import SearchMovieCard from "./components/SearchMovieCard";
 import Searchbar from "./components/Searchbar";
+import SearchResultMovieCard from "./components/SearchResultMovieCard";
 
 function App() {
   // useEffect(() => {
   //   movieSearchData("iron");
   // }, []);
+
   return (
     <div className="flex flex-col h-screen justify-between">
-      {/* <LandingPage>
+      <LandingPage>
         <Searchbar />
       </LandingPage>
-      <SearchMovieCard /> */}
-      <MovieReviewPage />
+      <SearchResultMovieCard />
+      {/* <MovieReviewPage /> */}
       <Footer />
     </div>
   );
