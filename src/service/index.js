@@ -1,7 +1,7 @@
 import axios from "axios";
 
 /**
- * this function will all movie by name
+ * this function will show all movie by name
  * @param  search
  * @returns movie data by name
  */
@@ -12,7 +12,6 @@ function getSearchURL(search) {
 }
 export async function movieSearchData(search) {
   const { data } = await axios.get(getSearchURL(search));
-  console.log(data);
   return data;
 }
 
@@ -27,6 +26,6 @@ function movieById(movieId) {
   }`;
 }
 export async function movieData(movieId) {
-  const { data } = await axios.get(movieById(movieId));
-  return data;
+  const { res } = await axios.get(movieById(movieId));
+  return res;
 }

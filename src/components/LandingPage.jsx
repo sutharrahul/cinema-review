@@ -3,7 +3,7 @@ import backgroundVideo from "../assets/bgVideo.webm";
 function LandingPage({ children }) {
   return (
     <section className="showcase h-screen flex justify-center text-center text-white bg-black relative">
-      <div class="video-container absolute inset-0 overflow-hidden">
+      <div className="video-container absolute inset-0 overflow-hidden">
         <video
           src={backgroundVideo}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"

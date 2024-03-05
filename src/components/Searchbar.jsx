@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import appimg from "../assets/appIcon.jpeg";
 
-function Searchbar() {
+function Searchbar({ onSearch }) {
+  const [search, setSearch] = useState("");
+
   return (
     <div className="px-7 sticky top-5">
       <div className="navbar bg-base-100 w-full gap-3 justify-between rounded-full pr-[14px] mt-5 opacity-85">
@@ -14,10 +16,19 @@ function Searchbar() {
         <div className="form-control w-full flex-row justify-between">
           <input
             type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            // onKeyUp={(e) => {
+            //   if (e.code === "Enter") {
+            //   }
+            // }}
             placeholder="Search"
             className="input input-bordered input-accent w-full rounded-full text-[#ffb86c]"
           />
-          <button className="btn btn-accent rounded-full ml-3">
+          <button
+            onClick={() => onSearch(search)}
+            className="btn btn-accent rounded-full ml-3"
+          >
             <svg
               className="w-4 h-4"
               aria-hidden="true"
@@ -27,9 +38,9 @@ function Searchbar() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
