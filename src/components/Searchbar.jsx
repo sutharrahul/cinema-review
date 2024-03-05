@@ -5,7 +5,7 @@ function Searchbar({ onSearch }) {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="px-7 sticky top-5">
+    <div className="px-10 sticky top-5 z-10">
       <div className="navbar bg-base-100 w-full gap-3 justify-between rounded-full pr-[14px] mt-5 opacity-85">
         <div>
           <div className="overflow-hidden rounded-full">
@@ -18,16 +18,17 @@ function Searchbar({ onSearch }) {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            // onKeyUp={(e) => {
-            //   if (e.code === "Enter") {
-            //   }
-            // }}
+            onKeyUp={(e) => {
+              if (e.code === "Enter") {
+                onSearch(search);
+              }
+            }}
             placeholder="Search"
             className="input input-bordered input-accent w-full rounded-full text-[#ffb86c]"
           />
           <button
             onClick={() => onSearch(search)}
-            className="btn btn-accent rounded-full ml-3"
+            className="btn btn-accent rounded-full  ml-3 overflow-hidden "
           >
             <svg
               className="w-4 h-4"
