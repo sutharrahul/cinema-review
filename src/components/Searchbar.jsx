@@ -5,8 +5,8 @@ function Searchbar({ onSearch }) {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="px-10 sticky top-5 z-10">
-      <div className="navbar bg-base-100 w-full gap-3 justify-between rounded-full pr-[14px] mt-5 opacity-85">
+    <div className="px-2 lg:px-10 sticky top-3 lg:top-7 z-10">
+      <div className="navbar bg-base-100 w-full gap-3 justify-between rounded-full opacity-85">
         <div>
           <div className="overflow-hidden rounded-full">
             <img className="scale-[130%] h-[50px]" src={appimg} alt="" />
