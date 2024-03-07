@@ -12,6 +12,7 @@ function getSearchURL(search) {
 }
 export async function movieSearchData(search) {
   const { data } = await axios.get(getSearchURL(search));
+  console.log(data);
   return data;
 }
 
@@ -21,11 +22,12 @@ export async function movieSearchData(search) {
  * @returns movieData
  */
 function movieById(movieId) {
-  return `https://www.omdbapi.com/?i=${movieId}}&apikey=${
+  return `https://www.omdbapi.com/?i=${movieId}&apikey=${
     import.meta.env.VITE_API_KEY
   }`;
 }
-export async function movieData(movieId) {
-  const { res } = await axios.get(movieById(movieId));
-  return res;
+
+export async function movieReviewData(movieId) {
+  const { data } = await axios.get(movieById(movieId));
+  return data;
 }

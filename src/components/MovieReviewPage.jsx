@@ -1,10 +1,9 @@
 import React from "react";
-import banner from "../assets/ironman.jpg";
-import { MOVIE_DETAILS_KEY, movieData } from "./const";
 import DetailKey from "./DetailKey";
 import GenreBadge from "./GenreBadge";
+import { MOVIE_DETAILS_KEY } from "./const";
 
-function MovieReviewPage() {
+function MovieReviewPage({ movieData }) {
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl px-4 py-5">
       <figure>
