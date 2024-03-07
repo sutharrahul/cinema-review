@@ -16,14 +16,15 @@ function App() {
   }
   return (
     <div>
-      <Searchbar onSearch={onSearch} />
+      <LandingPage>
+        <Searchbar onSearch={onSearch} />
+      </LandingPage>
       <BrowserRouter>
         <Routes>
           <Route path="/:movieId" element={<MovieReviewPage />} />
           <Route path="/" element={<Home movieData={data} />} />
         </Routes>
       </BrowserRouter>
-      <LandingPage />
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import appimg from "../assets/appIcon.jpeg";
-import { useNavigate } from "react-router-dom";
 
 function Searchbar({ onSearch }) {
   const [search, setSearch] = useState("");
@@ -10,7 +9,6 @@ function Searchbar({ onSearch }) {
       <div className="navbar bg-base-100 w-full gap-3 justify-between rounded-full opacity-85">
         <div>
           <a className="overflow-hidden rounded-full" href="/">
-            {" "}
             <img className="scale-[130%] h-[50px]" src={appimg} alt="" />
           </a>
         </div>
