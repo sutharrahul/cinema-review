@@ -19,3 +19,6 @@ function LandingPage({ children }) {
 }
 
 export default LandingPage;
+
+// card lg:card-side bg-base-100 shadow-xl px-4 py-5
+//

@@ -27,7 +27,7 @@ function movieById(movieId) {
   }`;
 }
 
-export async function movieReviewData(movieId) {
+export async function movieDataById(movieId) {
   const { data } = await axios.get(movieById(movieId));
   return data;
 }

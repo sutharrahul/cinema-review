@@ -8,7 +8,7 @@ export const MOVIE_DETAILS_KEY = [
   "imdbVotes",
   "BoxOffice",
 ];
-export const movieReviewData = {
+export const movieData = {
   Title: "The Incredible Hulk",
   Year: "2008",
   Rated: "PG-13",
