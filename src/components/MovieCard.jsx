@@ -13,7 +13,7 @@ function MovieCard({ movieCard }) {
       <div className="px-3 flex flex-col items-start ">
         <h3 className="font-bold text-2xl">{movieCard["Title"]}</h3>
         <p>{movieCard["Year"]}</p>
-        <p>{movieCard["imdbID"]}</p>
+        <p>{movieCard["Type"]}</p>
       </div>
     </div>
   );

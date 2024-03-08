@@ -5,7 +5,7 @@ import DetailKey from "./DetailKey";
 
 function MovieDetails({ movieData }) {
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl px-4 py-5">
+    <div className="font-montserrat card lg:card-side bg-base-100 shadow-xl px-4 py-5 ">
       <figure>
         <img src={movieData["Poster"]} alt="movie" />
       </figure>
