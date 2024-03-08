@@ -2,7 +2,7 @@ import React from "react";
 
 function Heading() {
   return (
-    <div className="font-montserrat w-screen fixed opacity-75 px-2 py-32">
+    <div className="font-montserrat w-screen sticky opacity-75 px-2 py-32">
       <h1 className="text-2xl lg:text-7xl text-center  font-bold flex flex-col items-center">
         Welcome To Cinema Review{" "}
       </h1>
