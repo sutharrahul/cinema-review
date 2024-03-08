@@ -2,7 +2,7 @@ import React from "react";
 import backgroundVideo from "../assets/bgVideo.webm";
 function LandingPage({ children }) {
   return (
-    <section className="showcase h-screen flex justify-center text-center text-white bg-black relative">
+    <section className="showcase h-screen flex justify-center text-white bg-black relative ">
       <div className="video-container absolute inset-0 overflow-hidden">
         <video
           src={backgroundVideo}
@@ -19,6 +19,3 @@ function LandingPage({ children }) {
 }
 
 export default LandingPage;
-
-// card lg:card-side bg-base-100 shadow-xl px-4 py-5
-//
