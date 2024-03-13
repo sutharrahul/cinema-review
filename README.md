@@ -38,7 +38,7 @@ npm run build
 
 ## API Usage
 
-This app utilizes the OMDb API to fetch movie data. You will need to obtain an API key from [OMDb API](http://www.omdbapi.com/) and add it to the project for the app to function properly.
+This app utilizes the OMDb API to fetch movie data. You will need to obtain an API key from [OMDb API](https://pokeapi.co/) and add it to the project for the app to function properly.
 
 ## Acknowledgements
 

@@ -11,9 +11,28 @@ function getSearchURL(search) {
   }`;
 }
 export async function movieSearchData(search) {
-  const { data } = await axios.get(getSearchURL(search));
-  console.log(data);
-  return data;
+  try {
+    const axiosResponse = await axios.get(getSearchURL(search));
+    /**
+     *  axios return network call response (it call axiosResponse)
+     *  axios response contains headres, config, data, status, status code etc.
+     *  among them data is actual API reponse
+     */
+    const response = axiosResponse.data;
+    /**
+     * Extract the data from axiosResponse
+     */
+    if (response?.Response === "True") {
+      return response;
+    }
+    throw new Error(response?.Error);
+  } catch (error) {
+    console.error(error.message);
+    return {
+      errorMessage: error.message || "Somthing went wrong...!",
+      Search: [],
+    };
+  }
 }
 
 /**
@@ -29,5 +48,6 @@ function movieById(movieId) {
 
 export async function movieDataById(movieId) {
   const { data } = await axios.get(movieById(movieId));
+
   return data;
 }
