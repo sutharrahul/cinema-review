@@ -3,7 +3,7 @@ import appLogo from "./assets/appIcon.jpeg";
 
 function Footer() {
   return (
-    <footer className="footer items-center p-4 bg-neutral text-neutral-content absolute bottom-0">
+    <footer className="footer items-center p-4 bg-neutral text-neutral-content  bottom-0">
       <aside className="items-center grid-flow-col">
         <img className="h-12 rounded-full" src={appLogo} alt="" />
         <p>Created by &nbsp;</p>

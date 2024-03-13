@@ -13,6 +13,7 @@ function getSearchURL(search) {
 export async function movieSearchData(search) {
   try {
     const axiosResponse = await axios.get(getSearchURL(search));
+    console.log(axiosResponse);
     /**
      *  axios return network call response (it call axiosResponse)
      *  axios response contains headres, config, data, status, status code etc.
@@ -47,7 +48,17 @@ function movieById(movieId) {
 }
 
 export async function movieDataById(movieId) {
-  const { data } = await axios.get(movieById(movieId));
-
-  return data;
+  try {
+    const { data } = await axios.get(movieById(movieId));
+    if (data?.Response === "True") {
+      return data;
+    }
+    throw new Error(data?.Error);
+  } catch (error) {
+    console.error(error.message);
+    return {
+      errorMessage: error.message || "Somthing went wrong...!",
+      data: [],
+    };
+  }
 }

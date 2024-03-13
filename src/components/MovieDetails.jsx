@@ -2,6 +2,7 @@ import React from "react";
 import { MOVIE_DETAILS_KEY } from "./const";
 import GenreBadge from "./GenreBadge";
 import DetailKey from "./DetailKey";
+import Footer from "../Footer";
 
 function MovieDetails({ movieData }) {
   return (
